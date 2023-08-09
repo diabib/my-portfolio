@@ -1,0 +1,274 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:#262626;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #262626;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-branding, .nav-link, .social-media a{
+    color:#FFF;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0 24 px;
+
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:60px;
+}
+
+.nav-branding {
+    font-size:2rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color:orangered;
+}
+
+.hamburger {
+    display:none;
+    cursor:pointer;
+}
+
+.bar {
+    display:block;
+    width:25px;
+    height:3px;
+    margin:5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFF;
+}
+
+
+@media(max-width:768px){
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        position:fixed;
+        left:-100%;
+        top:70px;
+        gap:0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin:16px 0;
+    }
+
+    .nav-menu.active{
+        left:0;
+    }
+}
+
+.container {
+    background-color: #262626;
+    color:#FFF;
+}
+
+.profile {
+    border-radius: 50%;
+
+}
+.main {
+    font-size: 2rem;
+    display:inline-flex;
+    justify-content: center;
+    padding:100px;
+    align-items: center;
+}
+
+.main p{
+    width:40%;
+}
+
+
+
+.orange {
+    color:orangered
+}
+
+@media (max-width:1000px){
+    .main {
+        display:block;
+        text-align: center;
+    }
+
+    .main p{
+        width:100%;
+        margin:20px auto;
+        font-size: 20px;
+    }
+
+
+    .main img {
+        border-radius: 0;
+        width:40%;
+        height:auto;
+        margin:auto;
+    }
+    p::first-letter {
+        font-size: 200%;
+        color: orangered;
+      }
+}
+
+
+
+.photo-container {
+    padding:25px;
+    margin:auto;
+    max-width: 60%;
+    display:grid;
+    gap:1px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item-img {
+    width:100%;
+    height:100%;
+    cursor:pointer;
+}
+
+.item03 {
+    grid-row:2 span;
+}
+
+
+.social-media {
+    margin-left: 10px;
+    display:flex;
+    flex-direction:column;
+}
+
+@media (max-width:800px){
+    .social-media {
+        display:block;
+    }
+}
+
+.move-item {
+    opacity: 0.5;
+    transition: opacity 0.5s ease; 
+  }
+
+#contact {
+    text-align: left;
+    padding:5px;
+    
+}
+
+.skills {
+    background-color: #FFF;
+    padding:15px;
+}
+
+h2 {
+    margin: 20px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #e0e0e0;
+  }
+
+  .section {
+    width:100%;
+
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  .language {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .language-name {
+    flex: 1;
+  }
+
+  .language-level {
+    flex: 1;
+    text-align: right;
+  }
+
+  .bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+  }
+
+  .fill {
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  
